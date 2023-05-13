@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="https://cdn.discordapp.com/attachments/1013374640401416195/1106468334834307083/terminal_1.png">
+  <title>Dark Mode Code</title>
+  <link rel="stylesheet" type="text/css" href="Style.css">
+  <!-- HTML -->
+
+
+<div class="button" data-tooltip="Size: 3,11KB">
+<div class="button-wrapper">
+  <div class="text">Donwoland code</div>
+    <span class="icon">
+      <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 0 0 4.561 21h14.878a2 2 0 0 0 1.94-1.515L22 17"></path></svg>
+    </span>
+  </div>
+</div>
+
+
+
+  <div class="checkbox-wrapper-23">
+    <input type="checkbox" id="check-23" onclick="toggleDarkMode()">
+    <label for="check-23" style="--size: 30px"></label>
+    <svg viewBox="0"></svg>
+  </div>
+  <p class="NapisDarkmodeButton" id="DarkModeText">DarkMode Checkbox</p>
+
+    <!-- JavaScript -->
+   <script>
+
+// Pobierz referencje do elementu przycisku
+var button = document.querySelector('.button');
+
+// Ustaw link do pobrania pliku
+var fileUrl = 'https://cdn.discordapp.com/attachments/493077089042432006/1105002338466410589/Dark_Mode_code.txt';
+
+// Dodaj nasłuchiwanie na kliknięcie przycisku
+button.addEventListener('click', function() {
+  // Utwórz element <a> i ustaw atrybuty dla pobrania pliku
+  var link = document.createElement('a');
+  link.href = fileUrl;
+  link.download = 'Dark_Mode_code.txt';
+  
+  // Dodaj element <a> do dokumentu
+  document.body.appendChild(link);
+  
+  // Symuluj kliknięcie na element <a> w celu rozpoczęcia pobierania
+  link.click();
+  
+  // Usuń element <a> z dokumentu
+  document.body.removeChild(link);
+});
+
+
+  function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
+  }
+</script>
+</body>
+</html>
